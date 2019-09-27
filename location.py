@@ -8,6 +8,11 @@ class Location:
         self.lon = lon      # longitude in degrees (-180 to 180)
 
 # ADD BOILERPLATE HERE (__eq__ and __repr__ functions)
+    def __eq__(self,other):
+        return self.name == other.name and self.lat == other.lat and self.lon == other.lon
+
+    def __repr__(self):
+        return "Location('" + str(self.name) + "', " + str(self.lat) + ", " + str(self.lon) + ")"
 
 def main():
     loc1 = Location("SLO", 35.3, -120.7)
@@ -31,4 +36,4 @@ def main():
     print(loc4 in locations)
 
 if __name__ == "__main__":
-    main()
+        main()
