@@ -14,8 +14,7 @@ def reverse_rec(int_list):
     pass
     rev_list = []
     if int_list == None:
-        raise ValueError("list is None")
-        
+        raise ValueError("list is None")       
     if len(int_list) == 0:
         return []
     return [int_list[-1]] + reverse_rec(int_list[:-1])
@@ -30,5 +29,4 @@ def bin_search(target, low, high, int_list):
     if int_list[high//2] > target:
         return bin_search(target, low, high//2, int_list[low:high//2])
     if int_list[high//2] < target:
-        return bin_search(target, high//2, high, int_list[high//2+1:high+1])
-
+        return bin_search(target, 0, len(int_list[high//2+1:high+1])-1, int_list[high//2+1:high+1])
