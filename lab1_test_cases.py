@@ -12,7 +12,8 @@ class TestLab1(unittest.TestCase):
         self.assertEqual(max_list_iter([3,1,1]), 3)
         self.assertEqual(max_list_iter([1,3,1]), 3)
         self.assertEqual(max_list_iter([1,1,3]), 3)
-
+        self.assertEqual(max_list_iter([1,1,1]), 1)
+        self.assertEqual(max_list_iter([1]), 1)
 
     def test_reverse_rec(self):
         self.assertEqual(reverse_rec([1,2,3]),[3,2,1])
